@@ -6,6 +6,7 @@ Aplicativo simples para entregadores registrarem entregas e acompanharem os ganh
 
 - Cadastro de bairros com o valor recebido por entrega.
 - Edição e exclusão de bairros.
+- Configuração de um valor de diária e opção para somá-lo ao total recebido.
 - Registro de entregas com data, horário e valor do bairro selecionado.
 - Resumo diário da quantidade de entregas e do total recebido.
 - Consulta de entregas por data.
@@ -16,10 +17,11 @@ Aplicativo simples para entregadores registrarem entregas e acompanharem os ganh
 
 1. Abra o arquivo `index.html` em um navegador atualizado.
 2. Acesse **Bairros** e cadastre cada bairro e o valor pago por entrega.
-3. Na aba **Entregas**, selecione um bairro e clique em **Adicionar entrega**.
-4. Use o campo de data no topo para consultar ou registrar entregas em outra data.
+3. Opcionalmente, informe o valor da diária em **Bairros** e marque **Somar a diária ao total recebido**.
+4. Na aba **Entregas**, selecione um bairro e clique em **Adicionar entrega**.
+5. Use o campo de data no topo para consultar ou registrar entregas em outra data.
 
-O total exibido considera somente as entregas da data selecionada. O valor e o nome do bairro são guardados no registro da entrega; alterações ou exclusões posteriores do cadastro do bairro não alteram entregas já registradas.
+O total exibido considera somente as entregas da data selecionada e, se ativada, soma uma vez o valor da diária. O valor da diária e a opção de inclusão são salvos junto com os dados do app. O valor e o nome do bairro também são guardados no registro da entrega; alterações ou exclusões posteriores do cadastro do bairro não alteram entregas já registradas.
 
 ## Dados e backup
 
