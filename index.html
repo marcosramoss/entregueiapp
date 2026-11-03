@@ -25,7 +25,14 @@ h1{font-size:20px;margin:0;letter-spacing:-.5px}header p{margin:3px 0 0;color:va
 label{display:block;font-size:12px;font-weight:650;color:#b5c1d1;margin:0 0 7px}
 select,input[type=text],input[type=number]{width:100%;padding:12px 13px;border:1px solid #34445b;border-radius:11px;background:#0d1727;color:var(--text);outline:none}
 select:focus,input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(34,197,94,.12)}
+input[type=checkbox]{appearance:none;position:relative;flex:0 0 44px;width:44px;height:24px;margin:0;border:1px solid #34445b;border-radius:999px;background:#202e43;cursor:pointer;transition:background .2s,border-color .2s}
+input[type=checkbox]::before{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--text);transition:transform .2s}
+input[type=checkbox]:checked{border-color:var(--green);background:linear-gradient(135deg,#22c55e,#16a34a)}
+input[type=checkbox]:checked::before{transform:translateX(20px)}
+input[type=checkbox]:focus{box-shadow:none}
+input[type=checkbox]:focus-visible{outline:3px solid rgba(34,197,94,.35);outline-offset:3px}
 select option{background:#111c2e;color:var(--text)}
+.toggle-label{display:flex;align-items:center;gap:10px;margin:0;cursor:pointer}
 .field{margin-bottom:13px}
 .selected-value{display:flex;justify-content:space-between;align-items:center;background:#0d1727;border:1px solid var(--line);padding:11px 13px;border-radius:11px;margin:12px 0 14px;font-size:13px;color:var(--muted)}
 .selected-value strong{font-size:16px;color:var(--green-dark)}
@@ -86,8 +93,7 @@ select option{background:#111c2e;color:var(--text)}
       <h2>Valor da diária</h2>
       <div class="field"><label for="dailyRate">Valor da diária (R$)</label><input id="dailyRate" type="number" min="0"
           step="0.01" placeholder="Ex.: 50,00"></div>
-      <label style="display:flex;align-items:center;gap:8px;margin:0"><input id="includeDailyRate" type="checkbox"> Somar a
-        diária ao total recebido</label>
+      <label class="toggle-label"><input id="includeDailyRate" type="checkbox"> Somar a diária ao total recebido</label>
       <p class="hint">Quando ativada, a diária é somada uma vez ao total da data selecionada na tela Entregas.</p>
     </div>
     <div class="card">
